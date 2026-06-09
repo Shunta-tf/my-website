@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="今野駿太のブログ。冒険・研究・日常をNoteで発信中。">
+  <title>Blog — Shunta Konno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    .blog-topic {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+      transition: var(--t);
+    }
+    .blog-topic:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .blog-topic .topic-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .blog-topic h4 { font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .blog-topic p { font-size: 0.82rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">SHUNTA<span>.</span>K</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="adventure.html">Adventure</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+<nav class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="adventure.html">Adventure</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <span class="section-label">Writing</span>
+  <h1><span class="accent">Blog</span></h1>
+  <p>冒険・研究・日常の思考をNoteで発信しています。</p>
+</section>
+
+<!-- ========== BLOG NOTE CARD ========== -->
+<section class="section">
+  <div class="blog-wrap">
+    <div class="blog-note-card fade-in">
+      <div class="note-icon">✏️</div>
+      <h2>ブログは<span class="accent">Note</span>で更新中！</h2>
+      <p>
+        冒険の旅レポート、研究のこと、AIや教育についての考察、
+        日常のつぶやきまで幅広く書いています。<br>
+        読んでもらえると嬉しいです。
+      </p>
+      <a href="https://note.com/shunta_mtb" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        ✏️ &nbsp;Noteを読む →
+      </a>
+      <div class="blog-tip">
+        📌 Note URL：<a href="https://note.com/shunta_mtb" target="_blank" rel="noopener" style="color:var(--accent);">note.com/shunta_mtb</a><br>
+        フォローするといち早く新記事をチェックできます。
+      </div>
+    </div>
+
+    <!-- Topics -->
+    <div class="fade-in" style="margin-top:4rem;">
+      <div class="section-header" style="margin-bottom:1.5rem;">
+        <span class="section-label">Topics</span>
+        <h2 class="section-title" style="font-size:1.5rem;">書いていること</h2>
+      </div>
+      <div class="blog-topics">
+        <div class="blog-topic">
+          <div class="topic-icon">🚵</div>
+          <h4>冒険・自転車旅</h4>
+          <p>旅のルート・出会い・学び</p>
+        </div>
+        <div class="blog-topic">
+          <div class="topic-icon">🔬</div>
+          <h4>AI・研究</h4>
+          <p>機械学習・ポーズ推定・論文</p>
+        </div>
+        <div class="blog-topic">
+          <div class="topic-icon">💡</div>
+          <h4>教育・テクノロジー</h4>
+          <p>プログラミング教育・AIリテラシー</p>
+        </div>
+        <div class="blog-topic">
+          <div class="topic-icon">📝</div>
+          <h4>日常・思考</h4>
+          <p>気づき・読書・日々の記録</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OTHER SNS ========== -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">More</span>
+      <h2 class="section-title" style="font-size:1.5rem;">他のSNSも見てね</h2>
+    </div>
+    <div class="sns-row fade-in">
+      <a href="https://www.instagram.com/shunta_mtb/" target="_blank" rel="noopener" class="sns-card">
+        <span class="icon">📸</span>
+        <span class="label">Instagram</span>
+      </a>
+      <a href="https://twitter.com/shunta_mtb" target="_blank" rel="noopener" class="sns-card">
+        <span class="icon">𝕏</span>
+        <span class="label">Twitter / X</span>
+      </a>
+      <a href="https://note.com/shunta_mtb" target="_blank" rel="noopener" class="sns-card" style="border-color:var(--border-hover);">
+        <span class="icon">✏️</span>
+        <span class="label">Note</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">SHUNTA<span>.</span>K</a>
+        <p>千葉生まれ、長野育ち。自転車で世界を走る冒険家・大学院生。<br>北米大陸横断14,000kmを完走。</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="adventure.html">Adventure</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/shunta_mtb/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://twitter.com/shunta_mtb" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://note.com/shunta_mtb" target="_blank" rel="noopener">Note</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shunta Konno. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

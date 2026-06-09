@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="今野駿太のプロフィール。千葉生まれ長野育ちの冒険家・大学院生。経歴・研究・趣味について。">
+  <title>About — Shunta Konno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">SHUNTA<span>.</span>K</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="adventure.html">Adventure</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+<nav class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="adventure.html">Adventure</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <span class="section-label">Profile</span>
+  <h1>About <span class="accent">Me</span></h1>
+  <p>千葉生まれ、長野育ちの冒険家・大学院生。</p>
+</section>
+
+<!-- ========== PROFILE ========== -->
+<section class="section">
+  <div class="container">
+    <div class="profile-section">
+      <!-- Photo -->
+      <div class="profile-img-wrap fade-in">
+        <img
+          src="images/profile.jpg"
+          alt="今野駿太"
+          class="profile-img"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+        <div class="profile-placeholder" style="display:none;">
+          <span class="ph-icon">📷</span>
+          <span>images/profile.jpg<br>を配置してください</span>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="fade-in fd1">
+        <h1 class="profile-name">
+          <span class="en">Shunta Konno</span>
+          今野 駿太
+        </h1>
+        <div class="profile-badges">
+          <span class="profile-badge">🚵 冒険家</span>
+          <span class="profile-badge">🎓 大学院生</span>
+          <span class="profile-badge">🤖 AI教育推進機構 学生部リーダー</span>
+        </div>
+
+        <p class="profile-bio">
+          千葉県生まれ、長野県育ち。幼いころから長野の大自然を自転車で走り回る。<br>
+          小学3年生のとき、長野県から千葉県まで約300kmを自転車で旅したことで冒険に目覚めた。<br>
+          高校生から北米大陸横断プロジェクトを開始し、これまでに計1万km以上を走破。<br>
+          現在は東京工科大学大学院でAI・メディアサイエンスを研究しながら、
+          プログラミング・ロボティクスの講師、Web制作、AI活用の副業を行っている。
+        </p>
+
+        <div class="profile-meta">
+          <div class="profile-meta-item">
+            <span class="mi">📍</span>
+            <span>千葉県生まれ、長野県育ち（現在：東京）</span>
+          </div>
+          <div class="profile-meta-item">
+            <span class="mi">🎓</span>
+            <span>東京工科大学大学院 メディアサイエンス専攻 修士1年</span>
+          </div>
+          <div class="profile-meta-item">
+            <span class="mi">🔬</span>
+            <span>研究：単眼カメラによるランニングフォーム異常検知</span>
+          </div>
+          <div class="profile-meta-item">
+            <span class="mi">✉️</span>
+            <span><a href="mailto:sk_mtb407@icloud.com">sk_mtb407@icloud.com</a></span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="adventure.html" class="btn btn-primary">冒険の記録</a>
+          <a href="contact.html" class="btn btn-outline">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TIMELINE ========== -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Journey</span>
+      <h2 class="section-title">経歴タイムライン</h2>
+      <p class="section-subtitle">小学生から現在まで、冒険と学びの軌跡。</p>
+    </div>
+
+    <div class="timeline fade-in">
+
+      <!-- 小学生 -->
+      <div class="timeline-group">
+        <div class="timeline-era">小学生（2012〜2016年）</div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="ti-title">長野 → 千葉 自転車一人旅</div>
+            <div class="ti-detail">約300km。初めての長旅で「冒険」の扉が開く。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">長野 → 鹿児島 自転車旅</div>
+            <div class="ti-detail">約1,200km。日本列島を縦断する大冒険へ挑戦。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 中学生 -->
+      <div class="timeline-group">
+        <div class="timeline-era">中学生（2016〜2019年）</div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="ti-title">富士山一周 自転車旅</div>
+            <div class="ti-detail">日本最高峰の周囲を走る。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">ニュージーランド縦断</div>
+            <div class="ti-detail">約800km。初の海外自転車旅で英語と異文化に飛び込む。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 高校生 -->
+      <div class="timeline-group">
+        <div class="timeline-era">高校生（2019〜2022年）</div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="ti-title">北米大陸横断 第1回</div>
+            <div class="ti-detail">カナダ最東端 セント・ジョンズ → ポートランド、約1,500km走破。プロジェクトを本格始動。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">長野 → 新潟 自転車旅</div>
+            <div class="ti-detail">約250km。日本海を目指して山越え。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">百名山 10座登頂</div>
+            <div class="ti-detail">自転車だけでなく登山にも本格挑戦。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">千葉県一周 自転車旅</div>
+            <div class="ti-detail">生まれ故郷の千葉をぐるりと一周。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 大学生 -->
+      <div class="timeline-group">
+        <div class="timeline-era">大学生（2022年〜）</div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="ti-title">東京工科大学 入学</div>
+            <div class="ti-detail">メディアサイエンスを専攻。AIとプログラミングを本格的に学ぶ。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">北米大陸横断 第2回</div>
+            <div class="ti-detail">カナダ モントリオール → ウィニペグ、約2,500km走破。通算走破距離が急増。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">通算走破距離 約1万km 突破</div>
+            <div class="ti-detail">カナダ最東端からイエローナイフまでの1万kmが現実に。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 大学院 -->
+      <div class="timeline-group">
+        <div class="timeline-era">大学院（2025年〜 現在）</div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="ti-title">東京工科大学大学院 入学</div>
+            <div class="ti-detail">メディアサイエンス専攻 修士課程。研究テーマ：単眼カメラの時系列ポーズデータを用いた個人内ランニングフォーム変化の異常検知。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">AI教育推進機構 学生部リーダー就任</div>
+            <div class="ti-detail">AIリテラシー教育の普及に向けて活動を本格化。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ti-title">プログラミング・ロボティクス講師 / Web制作・AI講師</div>
+            <div class="ti-detail">週末の講師業、教育関連企業との業務委託など副業で多方面に活動中。</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOBBIES ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Interests</span>
+      <h2 class="section-title">趣味・関心</h2>
+    </div>
+    <div class="hobby-list fade-in" style="justify-content:center;">
+      <span class="hobby-tag">🚵 自転車旅</span>
+      <span class="hobby-tag">🏔️ トレイルランニング</span>
+      <span class="hobby-tag">🏃 ランニング</span>
+      <span class="hobby-tag">🚗 ドライブ</span>
+      <span class="hobby-tag">🤖 AI・機械学習</span>
+      <span class="hobby-tag">💻 プログラミング</span>
+      <span class="hobby-tag">🗺️ 旅・バックパッキング</span>
+      <span class="hobby-tag">⛰️ 登山</span>
+      <span class="hobby-tag">📷 写真</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">SHUNTA<span>.</span>K</a>
+        <p>千葉生まれ、長野育ち。自転車で世界を走る冒険家・大学院生。<br>北米大陸横断14,000kmを完走。</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="adventure.html">Adventure</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/shunta_mtb/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://twitter.com/shunta_mtb" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://note.com/shunta_mtb" target="_blank" rel="noopener">Note</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shunta Konno. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
