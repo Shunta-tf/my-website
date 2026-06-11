@@ -124,8 +124,14 @@ h1,h2,h3,h4,h5 {
   display: block; width: 24px; height: 2px;
   background: var(--text-primary); transition: var(--t); border-radius: 2px;
 }
-/* hero page: ensure nav links are readable on white bg */
 .nav-links a { color: var(--text-secondary); }
+
+/* Home page: white nav before scroll */
+.home-page .header:not(.scrolled) .nav-logo { color: #fff; }
+.home-page .header:not(.scrolled) .nav-logo span { color: rgba(255,255,255,0.75); }
+.home-page .header:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.85); }
+.home-page .header:not(.scrolled) .nav-links a:hover { color: #fff; }
+.home-page .header:not(.scrolled) .nav-hamburger span { background: #fff; }
 .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -236,15 +242,16 @@ h1,h2,h3,h4,h5 {
   opacity: 0; z-index: 1;
   transition: opacity 1.2s ease;
 }
-.hero-slide.active { opacity: 0.55; }
+.hero-slide.active { opacity: 0.72; }
 .hero-overlay {
   display: block;
   position: absolute; inset: 0; z-index: 2;
   background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.72) 0%,
-    rgba(0,0,0,0.35) 45%,
-    rgba(0,0,0,0.05) 100%
+    to bottom,
+    rgba(0,0,0,0.42) 0%,
+    rgba(0,0,0,0.04) 28%,
+    rgba(0,0,0,0.08) 55%,
+    rgba(0,0,0,0.58) 100%
   );
 }
 
