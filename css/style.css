@@ -343,7 +343,15 @@ h1,h2,h3,h4,h5 {
 .activity-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
 .activity-icon { font-size: 2.5rem; margin-bottom: 1.25rem; display: block; }
 .activity-card { display: flex; flex-direction: column; }
-.activity-card h3 { font-size: 1.15rem; margin-bottom: 0.75rem; }
+.activity-card h3 {
+  font-size: 1.35rem; margin-bottom: 0.2rem;
+  font-family: 'Montserrat', sans-serif; letter-spacing: -0.01em;
+}
+.activity-sub {
+  display: block; font-size: 0.78rem; font-weight: 500;
+  color: var(--text-muted); margin-bottom: 0.9rem;
+  letter-spacing: 0.02em;
+}
 .activity-card p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.75; flex: 1; }
 .activity-card .btn { margin-top: 1.5rem; align-self: flex-start; }
 
