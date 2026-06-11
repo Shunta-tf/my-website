@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initMobileMenu();
     initScrollFade();
+    initHeroSlideshow();
     initParallax();
     initProgress();
     setActiveNav();
@@ -58,14 +59,29 @@ function initScrollFade() {
     els.forEach(el => obs.observe(el));
 }
 
+/* ---- Hero Slideshow ---- */
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (!slides.length) return;
+    let current = 0;
+    slides[0].classList.add('active');
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, 6000);
+}
+
 /* ---- Parallax Hero ---- */
 function initParallax() {
-    const bg = document.querySelector('.hero-bg');
-    if (!bg || window.innerWidth <= 768) return;
+    const slides = document.querySelectorAll('.hero-slide');
+    if (!slides.length || window.innerWidth <= 768) return;
 
     window.addEventListener('scroll', () => {
         const y = window.scrollY;
-        bg.style.transform = `scale(1.1) translateY(${y * 0.28}px)`;
+        slides.forEach(s => {
+            s.style.transform = `translateY(${y * 0.2}px)`;
+        });
     }, { passive: true });
 }
 

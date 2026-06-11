@@ -235,18 +235,9 @@ h1,h2,h3,h4,h5 {
   position: absolute; inset: 0;
   background-size: cover; background-position: center;
   opacity: 0; z-index: 1;
-  animation: heroFade 18s ease-in-out infinite;
+  transition: opacity 1.2s ease;
 }
-.hero-slide:nth-child(2) { animation-delay: 0s; }
-.hero-slide:nth-child(3) { animation-delay: 6s; }
-.hero-slide:nth-child(4) { animation-delay: 12s; }
-@keyframes heroFade {
-  0%   { opacity: 0; }
-  8%   { opacity: 0.3; }
-  28%  { opacity: 0.3; }
-  36%  { opacity: 0; }
-  100% { opacity: 0; }
-}
+.hero-slide.active { opacity: 0.3; }
 .hero-overlay { display: none; }
 
 .hero-content {
