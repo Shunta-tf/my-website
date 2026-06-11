@@ -242,16 +242,16 @@ h1,h2,h3,h4,h5 {
   opacity: 0; z-index: 1;
   transition: opacity 1.2s ease;
 }
-.hero-slide.active { opacity: 0.72; }
+.hero-slide.active { opacity: 0.9; }
 .hero-overlay {
   display: block;
   position: absolute; inset: 0; z-index: 2;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.42) 0%,
-    rgba(0,0,0,0.04) 28%,
-    rgba(0,0,0,0.08) 55%,
-    rgba(0,0,0,0.58) 100%
+    rgba(0,0,0,0.32) 0%,
+    rgba(0,0,0,0.02) 28%,
+    rgba(0,0,0,0.05) 55%,
+    rgba(0,0,0,0.52) 100%
   );
 }
 
