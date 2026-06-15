@@ -616,6 +616,7 @@ h1,h2,h3,h4,h5 {
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.5rem; transition: var(--t);
   box-shadow: var(--shadow); overflow: hidden;
+  display: flex; flex-direction: column;
 }
 .adv-card:hover {
   border-color: rgba(26,111,208,0.25);
@@ -885,7 +886,8 @@ textarea.form-ctrl { resize: vertical; min-height: 150px; line-height: 1.7; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6px;
-  margin-top: 1.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
   border-radius: var(--radius);
   overflow: hidden;
 }
