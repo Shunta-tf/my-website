@@ -622,10 +622,10 @@ h1,h2,h3,h4,h5 {
   box-shadow: var(--shadow-hover);
 }
 .adv-photo {
-  width: calc(100% + 3rem);
-  margin: -1.5rem -1.5rem 1.2rem;
+  width: 100%;
+  margin: 0 0 1.2rem;
   aspect-ratio: 1 / 1; object-fit: cover; display: block;
-  border-radius: var(--radius) var(--radius) 0 0;
+  border-radius: var(--radius-sm);
 }
 .era-badge {
   display: inline-block;
