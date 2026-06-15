@@ -814,6 +814,8 @@ textarea.form-ctrl { resize: vertical; min-height: 150px; line-height: 1.7; }
   .profile-bio br { display: none; }
 
   /* Adventure */
+  .adventures-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .adv-card { padding: 1rem; }
   .main-project { padding: 1.5rem; }
   .mp-head { flex-direction: column; }
   .mp-stats { flex-wrap: wrap; gap: 1.5rem; }
@@ -831,7 +833,7 @@ textarea.form-ctrl { resize: vertical; min-height: 150px; line-height: 1.7; }
 @media (max-width: 480px) {
   :root { --section-pad: 36px 0; }
   .hero-title { font-size: clamp(1.6rem, 8vw, 2.4rem); }
-  .adventures-grid { grid-template-columns: 1fr; }
+  .adventures-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
   .mp-stats { gap: 1rem; }
   .section-title { font-size: clamp(1.5rem, 6vw, 2.5rem); }
   .contact-grid { gap: 2rem; }
