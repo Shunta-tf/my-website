@@ -17,9 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
 function initHeader() {
     const header = document.querySelector('.header');
     if (!header) return;
-    const update = () => header.classList.toggle('scrolled', window.scrollY > 60);
-    window.addEventListener('scroll', update, { passive: true });
-    update();
+    let ticking = false;
+    let isScrolled = false;
+    const apply = () => {
+        const shouldScroll = window.scrollY > 60;
+        if (shouldScroll !== isScrolled) {
+            isScrolled = shouldScroll;
+            header.classList.toggle('scrolled', shouldScroll);
+        }
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(apply);
+    }, { passive: true });
+    apply();
 }
 
 /* ---- Mobile Menu ---- */
