@@ -809,8 +809,9 @@ h1,h2,h3,h4,h5 {
   .activity-grid { grid-template-columns: 1fr; }
 
   /* SNS */
-  .sns-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-  .sns-card { min-width: unset; }
+  .sns-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+  .sns-card { min-width: unset; padding: 1.1rem 0.5rem; }
+  .sns-card .label { font-size: 0.66rem; letter-spacing: 0.04em; }
 
   /* About */
   .profile-section { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 48px; }
