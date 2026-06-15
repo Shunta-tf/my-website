@@ -650,7 +650,7 @@ h1,h2,h3,h4,h5 {
   gap: 1.25rem;
 }
 .adv-card {
-  background: var(--bg-card); border: 1px solid var(--border);
+  background: var(--bg-card); border: 1px solid rgba(74,158,255,0.5);
   border-radius: var(--radius); padding: 1.5rem; transition: var(--t);
   box-shadow: var(--shadow); overflow: hidden;
   display: flex; flex-direction: column;
@@ -663,7 +663,7 @@ h1,h2,h3,h4,h5 {
   transition: transform 0.3s ease;
 }
 .adv-card:hover {
-  border-color: rgba(26,111,208,0.25);
+  border-color: var(--accent);
   box-shadow: var(--shadow-hover);
 }
 .adv-card:hover::before { transform: scaleX(1); }
