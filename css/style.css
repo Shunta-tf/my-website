@@ -612,6 +612,12 @@ h1,h2,h3,h4,h5 {
   display: grid; grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
   gap: 1.25rem;
 }
+.trail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  justify-content: center;
+  gap: 1.25rem;
+}
 .adv-card {
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.5rem; transition: var(--t);
@@ -815,6 +821,7 @@ textarea.form-ctrl { resize: vertical; min-height: 150px; line-height: 1.7; }
 
   /* Adventure */
   .adventures-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .trail-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
   .adv-card { padding: 1rem; }
   .main-project { padding: 1.5rem; }
   .mp-head { flex-direction: column; }

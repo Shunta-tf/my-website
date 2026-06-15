@@ -60,9 +60,9 @@
 <!-- ========== CONTACT SECTION ========== -->
 <section class="section">
   <div class="container">
-    <div class="contact-grid">
+    <div class="contact-grid" style="grid-template-columns:1fr;max-width:580px;margin:0 auto;">
 
-      <!-- Left: Info -->
+      <!-- Info -->
       <div class="contact-info fade-in">
         <h3>お問い合わせ先</h3>
 
@@ -110,68 +110,6 @@
               ✏️ Note
             </a>
           </div>
-        </div>
-      </div>
-
-      <!-- Right: Form -->
-      <div class="fade-in fd1">
-        <div class="c-form">
-          <h3 style="margin-bottom:1.75rem;font-size:1.1rem;">メッセージを送る</h3>
-
-          <form id="contact-form" novalidate>
-            <div class="form-group">
-              <label class="form-label" for="name">お名前 <span style="color:var(--accent)">*</span></label>
-              <input
-                type="text" id="name" name="name"
-                class="form-ctrl" placeholder="山田 太郎" required
-              >
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="email">メールアドレス <span style="color:var(--accent)">*</span></label>
-              <input
-                type="email" id="email" name="email"
-                class="form-ctrl" placeholder="example@email.com" required
-              >
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="subject">件名</label>
-              <input
-                type="text" id="subject" name="subject"
-                class="form-ctrl" placeholder="お問い合わせの件名"
-              >
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="message">メッセージ <span style="color:var(--accent)">*</span></label>
-              <textarea
-                id="message" name="message"
-                class="form-ctrl" rows="6"
-                placeholder="ご用件をお書きください..." required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary form-submit">
-              送信する →
-            </button>
-          </form>
-
-          <!-- Success Message -->
-          <div id="form-success" class="form-success">
-            <div class="success-icon">✅</div>
-            <h3>送信しました！</h3>
-            <p>
-              メッセージありがとうございます。<br>
-              確認後、なるべく早くご返信します。
-            </p>
-          </div>
-
-          <p style="margin-top:1.25rem;font-size:0.78rem;color:var(--text-muted);line-height:1.7;">
-            ※ このフォームはデモ用です。実際のご連絡は
-            <a href="mailto:sk_mtb407@icloud.com" style="color:var(--accent);">sk_mtb407@icloud.com</a>
-            まで直接メールをお送りください。
-          </p>
         </div>
       </div>
 
