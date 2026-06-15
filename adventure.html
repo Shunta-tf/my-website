@@ -25,6 +25,8 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">本文へスキップ</a>
+
 <!-- ========== HEADER ========== -->
 <header class="header">
   <nav class="nav">
@@ -37,12 +39,12 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="メニュー">
+    <button class="nav-hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
       <span></span><span></span><span></span>
     </button>
   </nav>
 </header>
-<nav class="nav-mobile">
+<nav class="nav-mobile" id="mobile-nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="adventure.html">Adventure</a>
@@ -50,6 +52,8 @@
   <a href="blog.html">Blog</a>
   <a href="contact.html">Contact</a>
 </nav>
+
+<main id="main" tabindex="-1">
 
 <!-- ========== PAGE HERO ========== -->
 <section class="page-hero">
@@ -101,7 +105,7 @@
 
       <div class="route-section">
         <div class="route-label">走破ルート</div>
-        <img src="images/cycling/map.jpg" alt="北米大陸横断 走破ルートマップ"
+        <img src="images/cycling/map.jpg" alt="北米大陸横断 走破ルートマップ" loading="lazy"
           style="width:100%; border-radius:var(--radius); margin-top:0.75rem; display:block;">
       </div>
     </div>
@@ -116,12 +120,12 @@
       <h2 class="section-title">旅の記録</h2>
     </div>
     <div class="photo-gallery fade-in">
-      <img src="images/cycling/03.jpg" alt="大西洋岸を出発">
-      <img src="images/cycling/06.jpg" alt="野営">
-      <img src="images/cycling/01.jpg" alt="大平原を行く">
-      <img src="images/cycling/02.jpg" alt="ノースウエスト準州に到達">
-      <img src="images/cycling/05.jpg" alt="夕暮れの湖">
-      <img src="images/cycling/04.jpg" alt="広大な空の下">
+      <img src="images/cycling/03.jpg" alt="大西洋岸を出発" loading="lazy">
+      <img src="images/cycling/06.jpg" alt="野営" loading="lazy">
+      <img src="images/cycling/01.jpg" alt="大平原を行く" loading="lazy">
+      <img src="images/cycling/02.jpg" alt="ノースウエスト準州に到達" loading="lazy">
+      <img src="images/cycling/05.jpg" alt="夕暮れの湖" loading="lazy">
+      <img src="images/cycling/04.jpg" alt="広大な空の下" loading="lazy">
     </div>
   </div>
 </section>
@@ -143,8 +147,8 @@
         <div class="adv-dist">30 km</div>
         <p class="adv-note">長野県上田市菅平高原で行われたトレランレースへ出場。30kmの部で優勝しました！</p>
         <div class="trail-photo-grid">
-          <img src="images/trailrun/01.jpg" alt="レース中">
-          <img src="images/trailrun/02.jpg" alt="山を登る">
+          <img src="images/trailrun/01.jpg" alt="スカイライントレイル菅平 レース中" loading="lazy">
+          <img src="images/trailrun/02.jpg" alt="スカイライントレイル菅平 山を登る" loading="lazy">
         </div>
       </div>
 
@@ -154,8 +158,8 @@
         <div class="adv-dist">43 km</div>
         <p class="adv-note">長野県軽井沢町で開催されたトレランレースへ出場。</p>
         <div class="trail-photo-grid">
-          <img src="images/trailrun/karuizawa-01.jpg" alt="軽井沢トレラン レース中">
-          <img src="images/trailrun/karuizawa-02.jpg" alt="軽井沢トレラン コース">
+          <img src="images/trailrun/karuizawa-01.jpg" alt="軽井沢トレラン レース中" loading="lazy">
+          <img src="images/trailrun/karuizawa-02.jpg" alt="軽井沢トレラン コース" loading="lazy">
         </div>
       </div>
 
@@ -291,6 +295,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
   <div class="container footer-inner">
@@ -305,6 +311,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="adventure.html">Adventure</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -319,7 +326,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Shunta Konno. All rights reserved.</p>
+      <p>© 2025–2026 Shunta Konno. All rights reserved.</p>
     </div>
   </div>
 </footer>

@@ -49,6 +49,16 @@ body.page-loaded { opacity: 1; }
 
 ::selection { background: rgba(26,111,208,0.16); color: var(--text-primary); }
 
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent); text-decoration: none; transition: var(--t); }
 a:hover { color: var(--accent-dark); }

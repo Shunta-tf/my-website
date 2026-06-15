@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initProgress();
     setActiveNav();
-    initContactForm();
 });
 
 /* ---- Sticky Header ---- */
@@ -30,14 +29,18 @@ function initMobileMenu() {
     if (!btn || !menu) return;
 
     btn.addEventListener('click', () => {
-        btn.classList.toggle('open');
-        menu.classList.toggle('open');
+        const isOpen = btn.classList.toggle('open');
+        menu.classList.toggle('open', isOpen);
+        btn.setAttribute('aria-expanded', String(isOpen));
+        btn.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
     });
 
     menu.querySelectorAll('a').forEach(a =>
         a.addEventListener('click', () => {
             btn.classList.remove('open');
             menu.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.setAttribute('aria-label', 'メニューを開く');
         })
     );
 }
@@ -76,11 +79,18 @@ function initHeroSlideshow() {
 function initParallax() {
     const slides = document.querySelectorAll('.hero-slide');
     if (!slides.length || window.innerWidth <= 768) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        slides.forEach(s => {
-            s.style.transform = `translateY(${y * 0.2}px)`;
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+            const y = window.scrollY;
+            slides.forEach(s => {
+                s.style.transform = `translateY(${y * 0.2}px)`;
+            });
+            ticking = false;
         });
     }, { passive: true });
 }
@@ -111,42 +121,4 @@ function setActiveNav() {
             a.classList.add('active');
         }
     });
-}
-
-/* ---- Contact Form ---- */
-function initContactForm() {
-    const form    = document.querySelector('#contact-form');
-    const success = document.querySelector('#form-success');
-    if (!form || !success) return;
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-
-        const name    = form.querySelector('[name="name"]').value.trim();
-        const email   = form.querySelector('[name="email"]').value.trim();
-        const message = form.querySelector('[name="message"]').value.trim();
-
-        if (!name || !email || !message) {
-            showFormError('すべての項目を入力してください。');
-            return;
-        }
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            showFormError('有効なメールアドレスを入力してください。');
-            return;
-        }
-
-        form.style.display = 'none';
-        success.classList.add('show');
-    });
-}
-
-function showFormError(msg) {
-    let err = document.querySelector('.form-error');
-    if (!err) {
-        err = document.createElement('p');
-        err.className = 'form-error';
-        err.style.cssText = 'color:#ff6b6b;font-size:.85rem;margin-top:.75rem;';
-        document.querySelector('#contact-form .form-submit')?.after(err);
-    }
-    err.textContent = msg;
 }
