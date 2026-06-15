@@ -1,1 +1,9 @@
 images/wix_image*
+
+# Source photo folders (Japanese-named originals) — converted copies live in
+# images/hero, images/cycling, images/trailrun, images/adventures instead.
+images/サイト写真/
+images/トレラン/
+images/北米横断/
+images/01.jpg
+.claude/
