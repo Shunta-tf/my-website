@@ -67,11 +67,11 @@ my-website/
 ```
 
 ### タイポグラフィ
-- 見出し（display）: **Montserrat**（英字）
+- 見出し（display）: **Archivo**（英字・可変フォント、`font-stretch:118%`で見出しをやや拡張）
 - 本文（日本語）: **Noto Sans JP**
 - Google Fonts を `<head>` で preconnect + 読み込み。
 - セクション見出し `.section-title` は `clamp(2rem,4.5vw,2.9rem)` / `font-weight:800` / `letter-spacing:-0.03em`。
-- 英字ラベルは Montserrat・大文字・`letter-spacing` 広め。
+- 英字ラベルは Archivo・大文字・`letter-spacing` 広め。
 
 ### 余白（レスポンシブで縮小）
 | 画面幅 | --section-pad |
@@ -107,7 +107,7 @@ my-website/
 <!-- フォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 ```
 トップ(index)のみ `<body class="home-page">` を付け、`</head>`直前に Person 構造化データ(JSON-LD)を入れる。
@@ -256,7 +256,7 @@ git push
 ## 11. 新規サイトを作るときのチェックリスト
 
 - [ ] `:root` のデザイントークンをこの仕様で定義
-- [ ] Montserrat + Noto Sans JP を読み込み
+- [ ] Archivo + Noto Sans JP を読み込み
 - [ ] 全ページ共通の head / header / footer をテンプレ化
 - [ ] ナビ項目を全ページで統一
 - [ ] 画像は ASCIIパス・JPEG（HEICは変換）
