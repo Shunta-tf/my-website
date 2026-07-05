@@ -46,7 +46,7 @@ my-website/
 ```css
 :root {
   --bg-primary:    #ffffff;   /* 背景（白ベース） */
-  --bg-secondary:  #f6f6f4;   /* 交互セクションの背景 */
+  --bg-secondary:  #f5f7fa;   /* 交互セクションの背景（寒色寄り） */
   --bg-card:       #ffffff;
   --accent:        #1a6fd0;   /* 差し色ブルー（主役） */
   --accent-light:  #4a9eff;
@@ -54,15 +54,18 @@ my-website/
   --accent-glow:   rgba(26,111,208,0.08);
   --text-primary:  #0e0e1e;   /* 見出し・本文 */
   --text-secondary:#4a5068;   /* 説明文 */
-  --text-muted:    #8a90a8;   /* ラベル・補足 */
+  --text-muted:    #686d84;   /* ラベル・補足 */
   --border:        rgba(14,14,30,0.09);
+  --border-hover:  rgba(26,111,208,0.3);  /* すべてのカードhover枠に共通使用 */
   --header-height: 72px;
-  --section-pad:   72px 0;    /* セクション上下余白 */
+  --section-pad:   88px 0;    /* セクション上下余白（PC。モバイルは44/36px） */
   --max-width:     1200px;
   --radius:        6px;       /* 角丸は小さく（丸すぎ厳禁） */
   --radius-sm:     4px;
-  --shadow:        0 2px 12px rgba(14,14,30,0.07);
-  --shadow-hover:  0 6px 20px rgba(14,14,30,0.11);
+  --radius-xs:     3px;       /* チップ・バッジ用 */
+  --shadow:        0 1px 2px rgba(15,23,42,0.04), 0 4px 14px rgba(15,23,42,0.05);
+  --shadow-hover:  0 2px 6px rgba(15,23,42,0.06), 0 14px 30px rgba(15,23,42,0.10);
+  --ink:           #0b1020;   /* ダークフッター背景 */
 }
 ```
 
@@ -70,13 +73,15 @@ my-website/
 - 見出し（display）: **Archivo**（英字・可変フォント、`font-stretch:118%`で見出しをやや拡張）
 - 本文（日本語）: **Noto Sans JP**
 - Google Fonts を `<head>` で preconnect + 読み込み。
-- セクション見出し `.section-title` は `clamp(2rem,4.5vw,2.9rem)` / `font-weight:800` / `letter-spacing:-0.03em`。
+- セクション見出し `.section-title` は `clamp(1.7rem,3.2vw,2.25rem)` / `font-weight:700` / `letter-spacing:0.02em` / `font-feature-settings:"palt"`。
+- **日本語見出しにマイナスの letter-spacing を使わない**（かなが詰まる）。日本語表示は `palt` + わずかな正のトラッキング。
+- 数字（日付・距離・統計）には `font-feature-settings:"tnum"` で等幅数字を。
 - 英字ラベルは Archivo・大文字・`letter-spacing` 広め。
 
 ### 余白（レスポンシブで縮小）
 | 画面幅 | --section-pad |
 |---|---|
-| PC | 72px |
+| PC | 88px |
 | ≤768px | 44px |
 | ≤480px | 36px |
 
